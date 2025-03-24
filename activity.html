@@ -1,0 +1,163 @@
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Activity - Crypto Trading Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      width: 470px;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      min-width: 470px;
+      background-color: #fff;
+      min-height: 100vh;
+    }
+
+    /* Header Styles */
+    .page-header {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 15px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .page-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Empty State */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+      text-align: center;
+    }
+
+    .empty-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .empty-text {
+      font-size: 24px;
+      color: #999;
+      font-weight: 500;
+    }
+
+    /* Customer Service */
+    .customer-service {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 100;
+    }
+
+    .service-icon {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .service-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 470px) {
+      .container {
+        width: 100%;
+        min-width: 320px;
+      }
+    }
+
+    @media (min-width: 471px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+      
+      .container {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    &lt;!-- Header -->
+    <div class="page-header">
+      <div class="back-btn" onclick="goBack()">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="page-title">Activity</div>
+    </div>
+
+    &lt;!-- Empty State -->
+    <div class="empty-state">
+      <div class="empty-icon">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNNTAgMjBjLTE2LjU2OSAwLTMwIDEzLjQzMS0zMCAzMHMxMy40MzEgMzAgMzAgMzAgMzAtMTMuNDMxIDMwLTMwLTEzLjQzMS0zMC0zMC0zMHptMCA1NGMtMTMuMjU1IDAtMjQtMTAuNzQ1LTI0LTI0czEwLjc0NS0yNCAyNCAyNCAyNCAxMC43NDUgMjQgMjQtMTAuNzQ1IDI0LTI0IDI0eiIgZmlsbD0iIzRmZDFjNSIvPgogIDxwYXRoIGQ9Ik01MCAzMGMtMTEuMDQ2IDAtMjAgOC45NTQtMjAgMjBzOC45NTQgMjAgMjAgMjAgMjAtOC45NTQgMjAtMjAtOC45NTQtMjAtMjAtMjB6bTAgMzZjLTguODM3IDAtMTYtNy4xNjMtMTYtMTZzNy4xNjMtMTYgMTYtMTYgMTYgNy4xNjMgMTYgMTYtNy4xNjMgMTYtMTYgMTZ6IiBmaWxsPSIjNGZkMWM1Ii8+CiAgPHBhdGggZD0iTTUwIDQwYy01LjUyMyAwLTEwIDQuNDc3LTEwIDEwczQuNDc3IDEwIDEwIDEwIDEwLTQuNDc3IDEwLTEwLTQuNDc3LTEwLTEwLTEwem0wIDE2Yy0zLjMxNCAwLTYtMi42ODYtNi02czIuNjg2LTYgNiA2IDYgMi42ODYgNiA2LTIuNjg2IDYtNiA2eiIgZmlsbD0iIzRmZDFjNSIvPgogIDxwYXRoIGQ9Ik01MCA1MGMwLTIuNzYxLTIuMjM5LTUtN
+
+S01cy01IDIuMjM5LTUgNSAyLjIzOSA1IDUgNSA1LTIuMjM5IDUtNXoiIGZpbGw9IiM0ZmQxYzUiLz4KICA8cGF0aCBkPSJNODUgMTVjLTIuNzYxIDAtNSAyLjIzOS01IDVzMi4yMzkgNSA1IDUgNS0yLjIzOSA1LTUtMi4yMzkgNS01LTV6IiBmaWxsPSIjZmY2YjZiIi8+CiAgPHBhdGggZD0iTTE1IDg1Yy0yLjc2MSAwLTUgMi4yMzktNSA1czIuMjM5IDUgNSA1IDUtMi4yMzkgNS01LTIuMjM5LTUtNS01eiIgZmlsbD0iI2ZmNmI2YiIvPgo8L3N2Zz4=" alt="Empty Box">
+      </div>
+      <div class="empty-text">Empty</div>
+    </div>
+
+    &lt;!-- Customer Service -->
+    <div class="customer-service">
+      <div class="service-icon">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMjUiIGZpbGw9IiNmZmYiLz4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyMiIgZmlsbD0iI2ZmOTkwMCIvPgogIDxwYXRoIGQ9Ik0xNSAyMGMwLTUuNTIzIDQuNDc3LTEwIDEwLTEwczEwIDQuNDc3IDEwIDEwLTQuNDc3IDEwLTEwIDEwLTEwLTQuNDc3LTEwLTEweiIgZmlsbD0iI2ZmZiIvPgogIDxwYXRoIGQ9Ik0yMCAxOGMwLTEuMTA1Ljg5NS0yIDItMnMyIC44OTUgMiAyLS44OTUgMi0yIDItMi0uODk1LTItMnptOCAwYzAtMS4xMDUuODk1LTIgMi0yczIgLjg5NSAyIDItLjg5NSAyLTIgMi0yLS44OTUtMi0yeiIgZmlsbD0iIzMzMyIvPgogIDxwYXRoIGQ9Ik0xOCAyNWM1LjUyMyAwIDEwLTIuMjM5IDEwLTVzLTQuNDc3LTUtMTAtNS0xMCAyLjIzOS0xMCA1IDQuNDc3IDUgMTAgNXoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMjUgMjVjMCAxLjY1Ny0zLjEzNCAzLTcgM3MtNy0xLjM0My03LTMgMy4xMzQtMyA3LTMgNyAxLjM0MyA3IDN6IiBmaWxsPSIjZmY5OTAwIi8+Cjwvc3ZnPg==" alt="Customer Service">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
