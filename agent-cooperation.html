@@ -1,0 +1,262 @@
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Agent Cooperation - Crypto Trading Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      width: 470px;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      min-width: 470px;
+      background-color: #fff;
+      min-height: 100vh;
+    }
+
+    /* Header Styles */
+    .page-header {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 15px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .page-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Agent Program Content */
+    .agent-content {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .agent-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .agent-description {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .agent-section {
+      margin-bottom: 15px;
+    }
+
+    .agent-section-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .agent-list {
+      list-style-type: none;
+      margin-bottom: 15px;
+    }
+
+    .agent-list-item {
+      margin-bottom: 10px;
+    }
+
+    .agent-list-numbered {
+      list-style-type: decimal;
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .agent-cta {
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    /* Float Button */
+    .float-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #ff9900;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    /* Customer Service */
+    .customer-service {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 100;
+    }
+
+    .service-icon {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .service-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 470px) {
+      .container {
+        width: 100%;
+        min-width: 320px;
+      }
+    }
+
+    @media (min-width: 471px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+      
+      .container {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    &lt;!-- Header -->
+    <div class="page-header">
+      <div class="back-btn" onclick="goBack()">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="page-title">Agent Cooperation</div>
+    </div>
+
+    &lt;!-- Agent Program Content -->
+    <div class="agent-content">
+      <h2 class="agent-title">AI ROBOT Agent Program</h2>
+      <p class="agent-description">
+        AI ROBOT launches a global agent cooperation plan to provide agents with long-term and stable income. By recommending users to join AI ROBOT, agents can receive high commissions and additional rewards, opening the road to wealth through intelligent trading.
+      </p>
+
+      <div class="agent-section">
+        <div class="agent-section-title">Agent Level & Income</div>
+        <p>Global Partner Commission: Enjoy 22% Team Profit Reward: One-time 180,000 USDT</p>
+        <p>Promotion requirements: Develop 3 national partners</p>
+      </div>
+
+      <div class="agent-section">
+        <p>National partner commission: enjoy 18% Team profit sharing reward: one-time 100,000 USDT</p>
+        <p>Promotion requirements: Develop 3 city partners</p>
+      </div>
+
+      <div class="agent-section">
+        <p>City partner commission: enjoy 12% Team profit sharing reward: one-time 60,000 USDT</p>
+        <p>Promotion requirements: Invite 400 first-level effective subordinates</p>
+      </div>
+
+      <div class="agent-section">
+        <div class="agent-section-title">Agent (promotion agent)</div>
+        <p>commission:</p>
+        <ul class="agent-list">
+          <li class="agent-list-item">First-level agent: 11%</li>
+          <li class="agent-list-item">Second-level agent: 3%</li>
+          <li class="agent-list-item">Third-level agent: 2%</li>
+        </ul>
+        <p>No threshold to join, continuous income</p>
+      </div>
+
+      <div class="agent-section">
+        <div class="agent-section-title">How to Join</div>
+        <ol class="agent-list-numbered">
+          <li class="agent-list-item">Register an AI ROBOT account</li>
+          <li class="agent-list-item">Get exclusive promotion link</li>
+          <li class="agent-list-item">Invite users to register and recharge</li>
+          <li class="agent-list-item">Commissions are credited to your account in real time and can be withdrawn at any time</li>
+        </ol>
+      </div>
+
+      <p class="agent-cta">Join AI ROBOT now and start your journey to smart arbitrage wealth!</p>
+    </div>
+
+    &lt;!-- Float Button -->
+    <div class="float-btn">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    &lt;!-- Customer Service -->
+    <div class="customer-service">
+      <div class="service-icon">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMjUiIGZpbGw9IiNmZmYiLz4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyMiIgZmlsbD0iI2ZmOTkwMCIvPgogIDxwYXRoIGQ9Ik0xNSAyMGMwLTUuNTIzIDQuNDc3LTEwIDEwLTEwczEwIDQuNDc3IDEwIDEwLTQuNDc3IDEwLTEwIDEwLTEwLTQuNDc3LTEwLTEweiIgZmlsbD0iI2ZmZiIvPgogIDxwYXRoIGQ9Ik0yMCAxOGMwLTEuMTA1Ljg5NS0yIDItMnMyIC44OTUgMiAyLS44OTUgMi0yIDItMi0uODk1LTItMnptOCAwYzAtMS4xMDUuODk1LTIgMi0yczIgLjg5NSAyIDItLjg5NSAyLTIgMi0yLS44OTUtMi0yeiIgZmlsbD0iIzMzMyIvPgogIDxwYXRoIGQ9Ik0xOCAyNWM1LjUyMyAwIDEwLTIuMjM5IDEwLTVzLTQuNDc3LTUtMTAtNS0xMCAyLjIzOS0xMCA1IDQuNDc3IDUgMTAgNXoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMjUgMjVjMCAxLjY1Ny0zLjEzNCAzLTcgM3MtNy0xLjM0My03LTMgMy4xMzQtMyA3LTMgNyAxLjM0MyA3IDN6IiBmaWxsPSIjZmY5OTAwIi8+Cjwvc3ZnPg==" alt="Customer Service">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+
+    // Scroll to top when float button is clicked
+    document.querySelector('.float-btn').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
+
